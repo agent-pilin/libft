@@ -32,6 +32,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		s_join[ft_strlen(s1) + i] = s2[i];
 		i++;
 	}
+	s_join[ft_strlen(s1) + i] = 0;
 	return (s_join);
 }
 /*
