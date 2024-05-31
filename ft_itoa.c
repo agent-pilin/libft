@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 		return (0);
 	s[count] = 0;
 	if (n_copy == 0)
-		return ("0\0");
+		s[--count] = '0';
 	while (n_copy > 0)
 	{
 		s[count - 1] = (n_copy % 10) + '0';
@@ -57,8 +57,11 @@ char	*ft_itoa(int n)
 int	main(int argc, char **argv)
 {
 	if (argc == 2)
-		//printf("%s\n", ft_itoa(atoi(argv[1])));
-		printf("%d\n", INT_MIN);
-    printf("%d\n", INT_MAX);
+	{
+		printf("%d\n", count_signs(atoi(argv[1])));
+		printf("%s\n", ft_itoa(atoi(argv[1])));
+		//printf("%d\n", INT_MIN);
+	}
+    //printf("%d\n", INT_MAX);
 }
 */

@@ -20,9 +20,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (start + len - 1 < ft_strlen(s))
 		substring = malloc(sizeof(char) * (len + 1));
-	else
+	else if (ft_strlen(s) > start)
 		substring = malloc(sizeof(char) * \
-				(ft_strlen(s) - start + ft_strlen(s) > 0 + 1));
+				(ft_strlen(s) - start + (ft_strlen(s) > 0) + 1));
+	else
+		substring = malloc(sizeof(char));
 	if (substring == NULL)
 		return (0);
 	while (start + i < ft_strlen(s) && i < len)
@@ -39,6 +41,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int	main(int argc, char **argv)
 {
 	if (argc == 4)
-		printf("%s\n", ft_substr(argv[1], atoi(argv[2]), atoi(argv[3])));
+		printf("%s", ft_substr(argv[1], atoi(argv[2]), atoi(argv[3])));
 }
 */

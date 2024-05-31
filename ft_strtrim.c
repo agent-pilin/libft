@@ -31,7 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 	size_t	i;
-	char			*s_trimmed;
+	char	*s_trimmed;
 
 	i = 0;
 	start = 0;
@@ -50,7 +50,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 		i++;
 	}
-	s_trimmed[start] = 0;
+	s_trimmed[i] = 0;
 	return (s_trimmed);
 }
 
