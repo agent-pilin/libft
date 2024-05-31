@@ -47,6 +47,8 @@ char	*fill_substring(char const *str, char charset)
 	while (str[i] != '\0' && str[i] != charset)
 		i++;
 	substring = malloc(sizeof(char) * (i + 1));
+	if (substring == NULL)
+		return (0);
 	i = 0;
 	while (str[i] != '\0' && str[i] != charset)
 	{
